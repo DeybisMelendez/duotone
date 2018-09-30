@@ -1,0 +1,134 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://tres/tilemap.tres" type="TileSet" id=1]
+[ext_resource path="res://escenas/cambiarNivel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://escenas/niveles/2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://escenas/moneda.tscn" type="PackedScene" id=4]
+[ext_resource path="res://escenas/pua.tscn" type="PackedScene" id=5]
+[ext_resource path="res://escenas/jugador.tscn" type="PackedScene" id=6]
+
+[node name="Node" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+position = Vector2( 16, 0 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 2, 8, 0, 3, 8, 0, 4, 8, 0, 5, 8, 0, 6, 8, 0, 7, 8, 0, 8, 8, 0, 9, 8, 0, 10, 8, 0, 11, 8, 0, 12, 8, 0, 13, 8, 0, 14, 8, 0, 15, 8, 0, 16, 8, 0, 17, 8, 0, 18, 8, 0, 19, 8, 0, 20, 8, 0, 21, 8, 0, 22, 8, 0, 23, 8, 0, 24, 8, 0, 25, 8, 0, 26, 8, 0, 27, 8, 0, 28, 8, 0, 29, 8, 0, 30, 8, 0, 65537, 8, 0, 65540, 8, 0, 65545, 8, 0, 65552, 8, 0, 65555, 8, 0, 65567, 8, 0, 131072, 8, 0, 131077, 8, 0, 131078, 8, 0, 131079, 8, 0, 131080, 8, 0, 131089, 8, 0, 131103, 8, 0, 262143, 8, 0, 196625, 8, 0, 196639, 8, 0, 327679, 8, 0, 262157, 8, 0, 262162, 8, 0, 262168, 8, 0, 262174, 8, 0, 393215, 8, 0, 327684, 8, 0, 327685, 8, 0, 327686, 8, 0, 327687, 8, 0, 327688, 8, 0, 327694, 8, 0, 327700, 8, 0, 327704, 8, 0, 327705, 8, 0, 327710, 8, 0, 458751, 8, 0, 393220, 8, 0, 393225, 8, 0, 393231, 8, 0, 393236, 8, 0, 393240, 8, 0, 393245, 8, 0, 393246, 8, 0, 524287, 8, 0, 458755, 8, 0, 458762, 8, 0, 458768, 8, 0, 458772, 8, 0, 458776, 8, 0, 458782, 8, 0, 589823, 8, 0, 524290, 8, 0, 524299, 8, 0, 524304, 8, 0, 524308, 8, 0, 524311, 8, 0, 524312, 8, 0, 524313, 8, 0, 524314, 8, 0, 524318, 8, 0, 655359, 8, 0, 589826, 8, 0, 589830, 8, 0, 589836, 8, 0, 589840, 8, 0, 589844, 8, 0, 589850, 8, 0, 589854, 8, 0, 720895, 8, 0, 655360, 8, 0, 655363, 8, 0, 655367, 8, 0, 655372, 8, 0, 655375, 8, 0, 655376, 8, 0, 655380, 8, 0, 655386, 8, 0, 655389, 8, 0, 655390, 8, 0, 786431, 8, 0, 720900, 8, 0, 720903, 8, 0, 720908, 8, 0, 720912, 8, 0, 720917, 8, 0, 720918, 8, 0, 720922, 8, 0, 720926, 8, 0, 851967, 8, 0, 786435, 8, 0, 786440, 8, 0, 786444, 8, 0, 786445, 8, 0, 786448, 8, 0, 786453, 8, 0, 786458, 8, 0, 786462, 8, 0, 917502, 8, 0, 917503, 8, 0, 851968, 8, 0, 851969, 8, 0, 851970, 8, 0, 851975, 8, 0, 851984, 8, 0, 851988, 8, 0, 851994, 8, 0, 851995, 8, 0, 851998, 8, 0, 983038, 8, 0, 917510, 8, 0, 917519, 8, 0, 917520, 8, 0, 917524, 8, 0, 917525, 8, 0, 917526, 8, 0, 917527, 8, 0, 917528, 8, 0, 917529, 8, 0, 917534, 8, 0, 1048574, 8, 0, 983046, 8, 0, 983051, 8, 0, 983056, 8, 0, 983069, 8, 0, 1114110, 8, 0, 1048581, 8, 0, 1048586, 8, 0, 1048592, 8, 0, 1048604, 8, 0, 1179646, 8, 0, 1179647, 8, 0, 1114112, 8, 0, 1114113, 8, 0, 1114114, 8, 0, 1114115, 8, 0, 1114116, 8, 0, 1114117, 8, 0, 1114118, 8, 0, 1114119, 8, 0, 1114120, 8, 0, 1114121, 8, 0, 1114122, 8, 0, 1114123, 8, 0, 1114124, 8, 0, 1114125, 8, 0, 1114126, 8, 0, 1114127, 8, 0, 1114128, 8, 0, 1114129, 8, 0, 1114130, 8, 0, 1114131, 8, 0, 1114132, 8, 0, 1114133, 8, 0, 1114134, 8, 0, 1114135, 8, 0, 1114136, 8, 0, 1114137, 8, 0, 1114138, 8, 0, 1114139, 8, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="cambiarNivel" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 504, 24 )
+siguienteNivel = ExtResource( 3 )
+
+[node name="monedas" type="Node" parent="." index="2"]
+
+editor/display_folded = true
+
+[node name="moneda" parent="monedas" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 16, 192 )
+
+[node name="moneda2" parent="monedas" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 128, 48 )
+
+[node name="moneda3" parent="monedas" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 112, 48 )
+
+[node name="moneda4" parent="monedas" index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 224, 176 )
+
+[node name="moneda5" parent="monedas" index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 336, 192 )
+
+[node name="moneda6" parent="monedas" index="5" instance=ExtResource( 4 )]
+
+position = Vector2( 352, 208 )
+
+[node name="moneda7" parent="monedas" index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 288, 16 )
+
+[node name="moneda8" parent="monedas" index="7" instance=ExtResource( 4 )]
+
+position = Vector2( 416, 112 )
+
+[node name="moneda9" parent="monedas" index="8" instance=ExtResource( 4 )]
+
+position = Vector2( 192, 256 )
+
+[node name="moneda10" parent="monedas" index="9" instance=ExtResource( 4 )]
+
+position = Vector2( 112, 256 )
+
+[node name="puas" type="Node" parent="." index="3"]
+
+editor/display_folded = true
+
+[node name="pua" parent="puas" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( 80, 256 )
+
+[node name="pua2" parent="puas" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( 176, 240 )
+
+[node name="pua3" parent="puas" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 64, 96 )
+
+[node name="pua4" parent="puas" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 288, 256 )
+
+[node name="pua5" parent="puas" index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 464, 240 )
+
+[node name="pua6" parent="puas" index="5" instance=ExtResource( 5 )]
+
+position = Vector2( 416, 208 )
+
+[node name="pua7" parent="puas" index="6" instance=ExtResource( 5 )]
+
+position = Vector2( 400, 208 )
+
+[node name="pua8" parent="puas" index="7" instance=ExtResource( 5 )]
+
+position = Vector2( 336, 48 )
+rotation = 3.14159
+
+[node name="pua9" parent="puas" index="8" instance=ExtResource( 5 )]
+
+position = Vector2( 160, 64 )
+rotation = 3.14159
+
+[node name="pua10" parent="puas" index="9" instance=ExtResource( 5 )]
+
+position = Vector2( 112, 64 )
+rotation = 3.14159
+
+[node name="jugador" parent="." index="4" instance=ExtResource( 6 )]
+
+position = Vector2( 23, 262 )
+
+

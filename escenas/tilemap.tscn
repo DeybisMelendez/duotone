@@ -1,0 +1,195 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://sprites/simpleGraphics_tiles16x16.png" type="Texture" id=1]
+[ext_resource path="res://escenas/StaticBody2DTile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://escenas/StaticBody2DTile2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://escenas/StaticBody2DTile3.tscn" type="PackedScene" id=4]
+
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 8
+_sections_unfolded = [ "Animation" ]
+
+[node name="Sprite2" type="Sprite" parent="." index="1"]
+
+position = Vector2( 16, 0 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 8
+frame = 32
+_sections_unfolded = [ "Animation" ]
+
+[node name="Sprite3" type="Sprite" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 32, 0 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 8
+frame = 5
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" parent="Sprite3" index="0" instance=ExtResource( 2 )]
+
+[node name="Sprite4" type="Sprite" parent="." index="3"]
+
+editor/display_folded = true
+position = Vector2( 48, 0 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 8
+frame = 6
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" parent="Sprite4" index="0" instance=ExtResource( 2 )]
+
+[node name="Sprite5" type="Sprite" parent="." index="4"]
+
+editor/display_folded = true
+position = Vector2( 64, 0 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 8
+frame = 10
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" parent="Sprite5" index="0" instance=ExtResource( 2 )]
+
+[node name="Sprite6" type="Sprite" parent="." index="5"]
+
+position = Vector2( 80, 0 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 8
+frame = 11
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" parent="Sprite6" index="0" instance=ExtResource( 3 )]
+
+[node name="Sprite7" type="Sprite" parent="." index="6"]
+
+position = Vector2( 96, 0 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 8
+frame = 12
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" parent="Sprite7" index="0" instance=ExtResource( 4 )]
+
+[node name="Sprite8" type="Sprite" parent="." index="7"]
+
+position = Vector2( 112, 0 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 8
+frame = 15
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" parent="Sprite8" index="0" instance=ExtResource( 2 )]
+
+[node name="Sprite9" type="Sprite" parent="." index="8"]
+
+position = Vector2( 0, 16 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 8
+frame = 16
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" parent="Sprite9" index="0" instance=ExtResource( 2 )]
+
+[node name="Sprite10" type="Sprite" parent="." index="9"]
+
+position = Vector2( 16, 16 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 8
+frame = 17
+_sections_unfolded = [ "Animation", "Region" ]
+
+[node name="StaticBody2D" parent="Sprite10" index="0" instance=ExtResource( 2 )]
+
+[node name="Sprite11" type="Sprite" parent="." index="10"]
+
+position = Vector2( 32, 16 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 8
+frame = 18
+_sections_unfolded = [ "Animation", "Region" ]
+
+[node name="StaticBody2D" parent="Sprite11" index="0" instance=ExtResource( 2 )]
+
+[node name="Sprite12" type="Sprite" parent="." index="11"]
+
+position = Vector2( 48, 16 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 8
+frame = 19
+_sections_unfolded = [ "Animation", "Region" ]
+
+[node name="StaticBody2D" parent="Sprite12" index="0" instance=ExtResource( 3 )]
+
+[node name="Sprite13" type="Sprite" parent="." index="12"]
+
+position = Vector2( 64, 16 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 8
+frame = 20
+_sections_unfolded = [ "Animation", "Region" ]
+
+[node name="StaticBody2D" parent="Sprite13" index="0" instance=ExtResource( 4 )]
+
+[node name="Sprite14" type="Sprite" parent="." index="13"]
+
+position = Vector2( 80, 16 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 8
+frame = 21
+_sections_unfolded = [ "Animation", "Region" ]
+
+[node name="StaticBody2D" parent="Sprite14" index="0" instance=ExtResource( 2 )]
+
+[node name="Sprite15" type="Sprite" parent="." index="14"]
+
+position = Vector2( 96, 16 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 8
+frame = 22
+_sections_unfolded = [ "Animation", "Region" ]
+
+[node name="StaticBody2D" parent="Sprite15" index="0" instance=ExtResource( 2 )]
+
+[node name="Sprite16" type="Sprite" parent="." index="15"]
+
+position = Vector2( 112, 16 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 8
+frame = 23
+_sections_unfolded = [ "Animation", "Region" ]
+
+[node name="StaticBody2D" parent="Sprite16" index="0" instance=ExtResource( 2 )]
+
+[node name="Sprite17" type="Sprite" parent="." index="16"]
+
+position = Vector2( 0, 32 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 8
+frame = 28
+_sections_unfolded = [ "Animation", "Region" ]
+
+[node name="StaticBody2D" parent="Sprite17" index="0" instance=ExtResource( 2 )]
+
+

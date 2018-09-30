@@ -1,0 +1,94 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://tres/tilemap.tres" type="TileSet" id=1]
+[ext_resource path="res://escenas/jugador.tscn" type="PackedScene" id=2]
+[ext_resource path="res://escenas/pua.tscn" type="PackedScene" id=3]
+[ext_resource path="res://escenas/cambiarNivel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://escenas/niveles/0.tscn" type="PackedScene" id=5]
+[ext_resource path="res://escenas/moneda.tscn" type="PackedScene" id=6]
+[ext_resource path="res://fuentes/DigitalDisco-Thin.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 24
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="inicio" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -65536, 14, 0, -65535, 14, 0, -65534, 14, 0, -65533, 14, 0, -65532, 14, 0, 0, 14, 0, 4, 14, 0, 65536, 8, 0, 65540, 8, 0, 65541, 8, 0, 65542, 8, 0, 131072, 8, 0, 131078, 8, 0, 196608, 8, 0, 196614, 8, 0, 196615, 8, 0, 196618, 8, 0, 196619, 8, 0, 196620, 8, 0, 196621, 8, 0, 196622, 8, 0, 196623, 8, 0, 196624, 8, 0, 262144, 8, 0, 262151, 8, 0, 262152, 8, 0, 262154, 8, 0, 262160, 8, 0, 262161, 8, 0, 262162, 8, 0, 262163, 8, 0, 262164, 8, 0, 262165, 8, 0, 262166, 8, 0, 327680, 8, 0, 327688, 8, 0, 327689, 8, 0, 327690, 8, 0, 327702, 8, 0, 393216, 8, 0, 393238, 8, 0, 458752, 8, 0, 458774, 8, 0, 524288, 8, 0, 524310, 8, 0, 524311, 8, 0, 524312, 8, 0, 524313, 8, 0, 524314, 8, 0, 524315, 8, 0, 524316, 8, 0, 589824, 8, 0, 589852, 8, 0, 655360, 8, 0, 655388, 8, 0, 655389, 8, 0, 720896, 8, 0, 720925, 8, 0, 720926, 8, 0, 786432, 8, 0, 786441, 10, 0, 786442, 10, 0, 786443, 10, 0, 786462, 8, 0, 851968, 8, 0, 851977, 10, 0, 851978, 10, 0, 851979, 10, 0, 851998, 8, 0, 851999, 8, 0, 917504, 8, 0, 917505, 8, 0, 917506, 8, 0, 917507, 8, 0, 917508, 8, 0, 917509, 8, 0, 917510, 8, 0, 917511, 8, 0, 917512, 8, 0, 917513, 8, 0, 917514, 8, 0, 917515, 8, 0, 917516, 8, 0, 917517, 8, 0, 917518, 8, 0, 917519, 8, 0, 917536, 8, 0, 983055, 8, 0, 983056, 8, 0, 983072, 8, 0, 1048592, 8, 0, 1048593, 8, 0, 1048608, 8, 0, 1114129, 8, 0, 1114130, 8, 0, 1114131, 8, 0, 1114132, 8, 0, 1114133, 8, 0, 1114134, 8, 0, 1114135, 8, 0, 1114136, 8, 0, 1114137, 8, 0, 1114138, 8, 0, 1114139, 8, 0, 1114140, 8, 0, 1114141, 8, 0, 1114142, 8, 0, 1114143, 8, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="jugador" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 31.8744, 20.169 )
+
+[node name="puas" type="Node" parent="." index="2"]
+
+[node name="pua" parent="puas" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 192, 208 )
+
+[node name="cambiarNivel" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 504, 232 )
+siguienteNivel = ExtResource( 5 )
+
+[node name="moneda" parent="." index="4" instance=ExtResource( 6 )]
+
+position = Vector2( 160, 176 )
+
+[node name="moneda2" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 400, 256 )
+
+[node name="moneda3" parent="." index="6" instance=ExtResource( 6 )]
+
+position = Vector2( 416, 256 )
+
+[node name="Label" type="Label" parent="." index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 96.0
+margin_right = 350.0
+margin_bottom = 155.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Take all the coins
+Use WASD, Space or Arrows"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+
